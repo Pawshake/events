@@ -1,0 +1,27 @@
+{
+    "name": "calibrate-checkout/pawshake-enums",
+    "description": "Enums for Pawshake",
+    "authors": [
+        {
+            "name": "Ward Van Hooreweghe",
+            "email": "ward.vanhooreweghe@calibrate.be"
+        },
+        {
+            "name": "Michael Schuddings",
+            "email": "michael@calibrate.be"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "Enums\\":"Enums/"
+        }
+    },
+    "type": "laravel-library",
+    "require": {
+        "composer/installers": "~1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}
