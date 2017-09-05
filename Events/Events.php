@@ -7,9 +7,16 @@
  */
 abstract class Events {
 
-    const USER_SEARCH_CREATE = 'events.users.search.new';
-    const USER_ENQUIRY_CREATE = 'events.users.enquiry.new';
-    const USER_BOOKING_CREATE = 'events.users.booking.new';
+    const USER_SEARCH_CREATE = 'events.search.new';
+
+    const ENQUIRY_CREATED_GUEST = 'events.enquiry.status.created.guest';
+    const ENQUIRY_CREATED_HOST = 'events.enquiry.status.created.host';
+
+    const ENQUIRY_PREAPPROVED_GUEST = 'events.enquiry.status.preapproved.guest';
+    const ENQUIRY_PREAPPROVED_HOST = 'events.enquiry.status.preapproved.host';
+
+    const BOOKING_CREATED_GUEST = 'events.booking.status.created.guest';
+    const BOOKING_CREATED_HOST = 'events.booking.status.created.host';
 
     /**
      * Returns all the events.
@@ -17,9 +24,16 @@ abstract class Events {
      */
     static function getAll() {
         return [
+            // Search
             self::USER_SEARCH_CREATE,
-            self::USER_ENQUIRY_CREATE,
-            self::USER_BOOKING_CREATE,
+            // Enquiry
+            self::ENQUIRY_CREATED_GUEST,
+            self::ENQUIRY_CREATED_HOST,
+            self::ENQUIRY_PREAPPROVED_GUEST,
+            self::ENQUIRY_PREAPPROVED_HOST,
+            // Booking related
+            self::BOOKING_CREATED_GUEST,
+            self::BOOKING_CREATED_HOST,
         ];
     }
 
@@ -40,10 +54,22 @@ abstract class Events {
                 'center' => 'required',
                 'city' => 'required',
             ],
-            self::USER_ENQUIRY_CREATE=> [
+            self::ENQUIRY_CREATED_GUEST=> [
                 'uid' => 'required|numeric',
             ],
-            self::USER_BOOKING_CREATE => [
+            self::ENQUIRY_CREATED_HOST => [
+                'uid' => 'required|numeric',
+            ],
+            self::ENQUIRY_PREAPPROVED_GUEST=> [
+                'uid' => 'required|numeric',
+            ],
+            self::ENQUIRY_PREAPPROVED_HOST => [
+                'uid' => 'required|numeric',
+            ],
+            self::BOOKING_CREATED_GUEST => [
+                'uid' => 'required|numeric',
+            ],
+            self::BOOKING_CREATED_HOST => [
                 'uid' => 'required|numeric',
             ],
         ];
