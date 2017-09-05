@@ -7,9 +7,9 @@
  */
 abstract class Events {
 
-    const USER_SEARCH_CREATE = 'events.users.search.' . General::CREATE;
-    const USER_ENQUIRY_CREATE = 'events.users.enquiry.' . General::CREATE;
-    const USER_BOOKING_CREATE = 'events.users.booking.' . General::CREATE;
+    const USER_SEARCH_CREATE = 'events.users.search.new';
+    const USER_ENQUIRY_CREATE = 'events.users.enquiry.new';
+    const USER_BOOKING_CREATE = 'events.users.booking.new';
 
     /**
      * Returns all the events.
