@@ -1,4 +1,4 @@
-<?php namespace Enums;
+<?php namespace Events;
 
 /**
  * Class Events
