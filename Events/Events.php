@@ -53,6 +53,7 @@ abstract class Events {
                 'bounds.southWest' => 'required',
                 'center' => 'required',
                 'city' => 'required',
+                'search_path' => 'required',
             ],
             self::ENQUIRY_CREATED_GUEST=> [
                 'uid' => 'required|numeric',
