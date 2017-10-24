@@ -9,16 +9,11 @@ abstract class Events {
 
     const USER_SEARCH_CREATE = 'events.search.new';
 
-    const ENQUIRY_CREATED_GUEST = 'events.enquiry.status.created.guest';
-    const ENQUIRY_CREATED_HOST = 'events.enquiry.status.created.host';
-
-    const ENQUIRY_PREAPPROVED_GUEST = 'events.enquiry.status.preapproved.guest';
-    const ENQUIRY_PREAPPROVED_HOST = 'events.enquiry.status.preapproved.host';
-
+    const ENQUIRY_CREATED = 'events.enquiry.status.created';
+    const ENQUIRY_PREAPPROVED = 'events.enquiry.status.preapproved';
     const ENQUIRY_DECLINED = 'events.enquiry.status.declined';
 
-    const BOOKING_CREATED_GUEST = 'events.booking.status.created.guest';
-    const BOOKING_CREATED_HOST = 'events.booking.status.created.host';
+    const BOOKING_CREATED = 'events.booking.status.created';
 
     /**
      * Returns all the events.
@@ -29,14 +24,11 @@ abstract class Events {
             // Search
             self::USER_SEARCH_CREATE,
             // Enquiry
-            self::ENQUIRY_CREATED_GUEST,
-            self::ENQUIRY_CREATED_HOST,
-            self::ENQUIRY_PREAPPROVED_GUEST,
-            self::ENQUIRY_PREAPPROVED_HOST,
+            self::ENQUIRY_CREATED,
+            self::ENQUIRY_PREAPPROVED,
             self::ENQUIRY_DECLINED,
             // Booking related
-            self::BOOKING_CREATED_GUEST,
-            self::BOOKING_CREATED_HOST,
+            self::BOOKING_CREATED,
         ];
     }
 
@@ -58,28 +50,25 @@ abstract class Events {
                 'city' => 'required',
                 'search_path' => 'required',
             ],
-            self::ENQUIRY_CREATED_GUEST=> [
-                'uid' => 'required|numeric',
-            ],
-            self::ENQUIRY_CREATED_HOST => [
-                'uid' => 'required|numeric',
-            ],
-            self::ENQUIRY_PREAPPROVED_GUEST=> [
-                'uid' => 'required|numeric',
-            ],
-            self::ENQUIRY_PREAPPROVED_HOST => [
-                'uid' => 'required|numeric',
-            ],
-            self::ENQUIRY_PREAPPROVED_HOST => [
+            self::ENQUIRY_CREATED => [
                 'thread_id' => 'required|numeric',
                 'guest_id' => 'required|numeric',
                 'host_id' => 'required|numeric',
             ],
-            self::BOOKING_CREATED_GUEST => [
-                'uid' => 'required|numeric',
+            self::ENQUIRY_PREAPPROVED => [
+                'thread_id' => 'required|numeric',
+                'guest_id' => 'required|numeric',
+                'host_id' => 'required|numeric',
             ],
-            self::BOOKING_CREATED_HOST => [
-                'uid' => 'required|numeric',
+            self::ENQUIRY_DECLINED => [
+                'thread_id' => 'required|numeric',
+                'guest_id' => 'required|numeric',
+                'host_id' => 'required|numeric',
+            ],
+            self::BOOKING_CREATED => [
+                'thread_id' => 'required|numeric',
+                'guest_id' => 'required|numeric',
+                'host_id' => 'required|numeric',
             ],
         ];
     }
