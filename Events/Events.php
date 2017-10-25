@@ -52,24 +52,24 @@ abstract class Events {
                 'search_path' => 'required',
             ],
             self::ENQUIRY_CREATED => [
-                'thread_id' => 'required|numeric',
-                'guest_id' => 'required|numeric',
-                'host_id' => 'required|numeric',
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
             ],
             self::ENQUIRY_PREAPPROVED => [
-                'thread_id' => 'required|numeric',
-                'guest_id' => 'required|numeric',
-                'host_id' => 'required|numeric',
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
             ],
             self::ENQUIRY_DECLINED => [
-                'thread_id' => 'required|numeric',
-                'guest_id' => 'required|numeric',
-                'host_id' => 'required|numeric',
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
             ],
             self::BOOKING_CREATED => [
-                'thread_id' => 'required|numeric',
-                'guest_id' => 'required|numeric',
-                'host_id' => 'required|numeric',
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
             ],
         ];
     }
