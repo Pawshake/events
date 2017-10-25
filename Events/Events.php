@@ -13,6 +13,7 @@ abstract class Events {
     const ENQUIRY_PREAPPROVED = 'events.enquiry.status.preapproved';
     const ENQUIRY_DECLINED = 'events.enquiry.status.declined';
     const ENQUIRY_AUTO_EXPIRE = 'events.enquiry.status.expire.auto';
+    const ENQUIRY_AUTO_DECLINE = 'events.enquiry.status.decline.auto';
 
     const BOOKING_CREATED = 'events.booking.status.created';
 
