@@ -61,7 +61,7 @@ abstract class Events {
                 'thread' => 'required|numeric',
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
-                'expireTimeout' => 'required|numeric',
+                'expireTimeout' => 'required',
             ],
             self::ENQUIRY_DECLINED => [
                 'thread' => 'required|numeric',
