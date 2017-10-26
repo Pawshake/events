@@ -16,6 +16,7 @@ abstract class Events {
     const ENQUIRY_AUTO_DECLINE = 'events.enquiry.status.decline.auto';
 
     const BOOKING_CREATED = 'events.booking.status.created';
+    const BOOKING_AWAITING_CONFIRMATION = 'events.booking.status.awaiting_confirmation';
 
     /**
      * Returns all the events.
