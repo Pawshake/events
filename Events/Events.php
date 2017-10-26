@@ -30,6 +30,7 @@ abstract class Events {
             self::ENQUIRY_PREAPPROVED,
             self::ENQUIRY_DECLINED,
             self::ENQUIRY_AUTO_EXPIRE,
+            self::ENQUIRY_AUTO_DECLINE,
             // Booking related
             self::BOOKING_CREATED,
         ];
