@@ -70,6 +70,16 @@ abstract class Events {
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
             ],
+            self::ENQUIRY_AUTO_EXPIRE => [
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
+            ],
+            self::ENQUIRY_AUTO_DECLINE => [
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
+            ],
             self::BOOKING_CREATED => [
                 'thread' => 'required|numeric',
                 'guest' => 'required|numeric',
