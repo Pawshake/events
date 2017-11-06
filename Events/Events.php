@@ -17,6 +17,7 @@ abstract class Events {
 
     const BOOKING_CREATED = 'events.booking.status.created';
     const BOOKING_AUTO_EXPIRE = 'events.booking.status.expire.auto';
+    const BOOKING_AUTO_DECLINE = 'events.booking.status.decline.auto';
     const BOOKING_DECLINED = 'events.booking.status.declined';
     const BOOKING_CONFIRMED = 'events.booking.status.confirmed';
 
@@ -37,6 +38,7 @@ abstract class Events {
             // Booking related
             self::BOOKING_CREATED,
             self::BOOKING_AUTO_EXPIRE,
+            self::BOOKING_AUTO_DECLINE,
             self::BOOKING_DECLINED,
             self::BOOKING_CONFIRMED,
         ];
@@ -102,6 +104,11 @@ abstract class Events {
                 'host' => 'required|numeric',
             ],
             self::BOOKING_CONFIRMED => [
+                'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
+            ],
+            self::BOOKING_AUTO_DECLINE => [
                 'thread' => 'required|numeric',
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
