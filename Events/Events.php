@@ -92,6 +92,7 @@ abstract class Events {
                 'thread' => 'required|numeric',
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
+                'expireTimeout' => 'required',
             ],
             self::BOOKING_AUTO_EXPIRE => [
                 'thread' => 'required|numeric',
