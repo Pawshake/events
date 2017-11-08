@@ -66,6 +66,7 @@ abstract class Events {
                 'thread' => 'required|numeric',
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
+                'startDate' => 'required|numeric',
             ],
             self::ENQUIRY_PREAPPROVED => [
                 'thread' => 'required|numeric',
