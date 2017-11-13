@@ -5,7 +5,8 @@
  *
  * @package Events
  */
-abstract class Events {
+abstract class Events
+{
 
     const USER_SEARCH_CREATE = 'events.search.new';
 
@@ -23,9 +24,11 @@ abstract class Events {
 
     /**
      * Returns all the events.
+     *
      * @return array
      */
-    static function getAll() {
+    public static function getAll()
+    {
         return [
             // Search
             self::USER_SEARCH_CREATE,
@@ -51,7 +54,8 @@ abstract class Events {
      *
      * @return array
      */
-    static function requiredVariables() {
+    public static function requiredVariables()
+    {
         return [
             self::USER_SEARCH_CREATE=> [
                 'uid' => 'required|numeric',
@@ -119,11 +123,27 @@ abstract class Events {
         ];
     }
 
-    static function getRequiredVariables($event) {
+    /**
+     * Get required variables.
+     *
+     * @param string $event
+     *
+     * @return mixed
+     */
+    public static function getRequiredVariables($event)
+    {
         return self::requiredVariables()[$event];
     }
 
-    static function isValid($event) {
+    /**
+     * If event is allowed.
+     *
+     * @param string $event
+     *
+     * @return bool
+     */
+    public static function isValid($event)
+    {
         return in_array($event, self::getAll());
     }
 }
