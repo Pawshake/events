@@ -21,7 +21,7 @@ abstract class Events
     const BOOKING_AUTO_DECLINE = 'events.booking.status.decline.auto';
     const BOOKING_DECLINED = 'events.booking.status.declined';
     const BOOKING_CONFIRMED = 'events.booking.status.confirmed';
-    const BOOKING_PAID_TO_SITTER = 'events.booking.status.paid_to_sitter';
+    const BOOKING_PAID_TO_HOST = 'events.booking.status.paid_to_host';
 
     /**
      * Returns all the events.
@@ -45,7 +45,7 @@ abstract class Events
             self::BOOKING_AUTO_DECLINE,
             self::BOOKING_DECLINED,
             self::BOOKING_CONFIRMED,
-            self::BOOKING_PAID_TO_SITTER,
+            self::BOOKING_PAID_TO_HOST,
         ];
     }
 
@@ -122,10 +122,8 @@ abstract class Events
                 'guest' => 'required|numeric',
                 'host' => 'required|numeric',
             ],
-            self::BOOKING_PAID_TO_SITTER => [
+            self::BOOKING_PAID_TO_HOST => [
                 'thread' => 'required|numeric',
-                'guest' => 'required|numeric',
-                'host' => 'required|numeric',
             ],
         ];
     }
