@@ -124,6 +124,8 @@ abstract class Events
             ],
             self::BOOKING_PAID_TO_SITTER => [
                 'thread' => 'required|numeric',
+                'guest' => 'required|numeric',
+                'host' => 'required|numeric',
             ],
         ];
     }
