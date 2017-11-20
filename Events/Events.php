@@ -124,6 +124,7 @@ abstract class Events
             ],
             self::BOOKING_PAID_TO_HOST => [
                 'thread' => 'required|numeric',
+                'timezone' => 'required|string',
             ],
         ];
     }
