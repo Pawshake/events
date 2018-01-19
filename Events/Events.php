@@ -7,23 +7,23 @@
  */
 abstract class Events {
 
-    public const USER_SEARCH_CREATE = 'events.search.new';
+    const USER_SEARCH_CREATE = 'events.search.new';
 
-    public const ENQUIRY_CREATED_GUEST = 'events.enquiry.status.created.guest';
-    public const ENQUIRY_CREATED_HOST = 'events.enquiry.status.created.host';
+    const ENQUIRY_CREATED_GUEST = 'events.enquiry.status.created.guest';
+    const ENQUIRY_CREATED_HOST = 'events.enquiry.status.created.host';
 
-    public const ENQUIRY_PREAPPROVED_GUEST = 'events.enquiry.status.preapproved.guest';
-    public const ENQUIRY_PREAPPROVED_HOST = 'events.enquiry.status.preapproved.host';
+    const ENQUIRY_PREAPPROVED_GUEST = 'events.enquiry.status.preapproved.guest';
+    const ENQUIRY_PREAPPROVED_HOST = 'events.enquiry.status.preapproved.host';
 
-    public const BOOKING_CREATED_GUEST = 'events.booking.status.created.guest';
-    public const BOOKING_CREATED_HOST = 'events.booking.status.created.host';
+    const BOOKING_CREATED_GUEST = 'events.booking.status.created.guest';
+    const BOOKING_CREATED_HOST = 'events.booking.status.created.host';
 
     /**
      * Returns all the events.
      *
      * @return array
      */
-    public static function getAll(): array {
+    public static function getAll() {
         return [
             // Search
             self::USER_SEARCH_CREATE,
@@ -45,7 +45,7 @@ abstract class Events {
      *
      * @return array
      */
-    public static function requiredVariables(): array {
+    public static function requiredVariables() {
         return [
             self::USER_SEARCH_CREATE=> [
                 'uid' => 'required|numeric',
@@ -84,7 +84,7 @@ abstract class Events {
      *
      * @return array
      */
-    public static function getRequiredVariables($event): array {
+    public static function getRequiredVariables($event) {
         return self::requiredVariables()[$event];
     }
 
@@ -95,7 +95,7 @@ abstract class Events {
      *
      * @return bool
      */
-    public static function isValid($event): bool {
+    public static function isValid($event) {
         return \in_array($event, self::getAll());
     }
 }
